@@ -51,6 +51,10 @@ streamlit run app.py
 - Deploy the dashboard publicly via Streamlit Cloud
 
 ## Screenshots
+## Screenshots
 ![Price Distribution](images/price_distribution.png)
 ![Price by Airline](images/price_by_airline.png)
+![Price vs Number of Stops](images/price_vs_stops.png)
+![Price vs Days Before Departure](images/price_vs_daysleft.png)
+![Price vs Flight Duration](images/price_vs_duration.png)
 ![Correlation Heatmap](images/correlation_heatmap.png)
