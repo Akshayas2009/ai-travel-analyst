@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Travel Analyst</title>
+<style>
+  body { font-family: -apple-system, Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 2rem; background: #f7f7f5; color: #222; }
+  h1 { font-size: 28px; }
+  h2 { font-size: 20px; margin-top: 2.5rem; border-bottom: 2px solid #ddd; padding-bottom: 6px; }
+  .kpis { display: flex; gap: 16px; margin: 1.5rem 0; }
+  .kpi { background: white; border-radius: 10px; padding: 1rem 1.5rem; flex: 1; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  .kpi .label { font-size: 13px; color: #666; }
+  .kpi .value { font-size: 24px; font-weight: 600; margin-top: 4px; }
+  .chart { background: white; border-radius: 10px; padding: 1rem; margin: 1.5rem 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  .chart img { width: 100%; border-radius: 6px; }
+  ul { line-height: 1.7; }
+  .insights, .recs { background: white; border-radius: 10px; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+</style>
+</head>
+<body>
+
+<h1>✈️ AI Travel Analyst</h1>
+<p>Exploring what drives flight prices, based on 92,052 cleaned flight records.</p>
+
+<div class="kpis">
+  <div class="kpi"><div class="label">Average price</div><div class="value">₹72,973</div></div>
+  <div class="kpi"><div class="label">Min price</div><div class="value">₹152</div></div>
+  <div class="kpi"><div class="label">Max price</div><div class="value">₹999,306</div></div>
+</div>
+
+<h2>Price distribution</h2>
+<div class="chart"><img src="images/price_distribution.png" alt="Price distribution"></div>
+
+<h2>Price by airline</h2>
+<div class="chart"><img src="images/price_by_airline.png" alt="Price by airline"></div>
+
+<h2>Price vs number of stops</h2>
+<div class="chart"><img src="images/price_vs_stops.png" alt="Price vs stops"></div>
+
+<h2>Price vs days before departure</h2>
+<div class="chart"><img src="images/price_vs_daysleft.png" alt="Price vs days before departure"></div>
+
+<h2>Price vs flight duration</h2>
+<div class="chart"><img src="images/price_vs_duration.png" alt="Price vs duration"></div>
+
+<h2>Correlation heatmap</h2>
+<div class="chart"><img src="images/correlation_heatmap.png" alt="Correlation heatmap"></div>
+
+<h2>Key insights</h2>
+<div class="insights">
+<ul>
+<li><b>Distance is the single biggest driver of price</b> (correlation: 0.65). Duration follows closely (0.54).</li>
+<li><b>Clear budget vs full-service airline split</b> — budget carriers (GoFirst, Indigo, AirAsia India, SpiceJet) average ₹10,300–10,900, while full-service international carriers (Qatar Airways, Singapore Airlines, Etihad, British Airways, Emirates) average ~₹99,800–101,000, roughly a 10x gap.</li>
+<li><b>More stops correlates with higher prices, but weakly</b> (correlation: 0.11) — ₹61,578 (non-stop) → ₹78,883 (1 stop) → ₹84,656 (2 stops).</li>
+<li><b>Booking earlier saves a small amount, but weakly</b> (correlation: -0.096).</li>
+<li><b>Passenger count has no relationship with price</b> (correlation: 0.004).</li>
+</ul>
+</div>
+
+<h2>Recommendations for travelers</h2>
+<div class="recs">
+<ul>
+<li>Route matters more than timing — the biggest savings come from route/airline choice.</li>
+<li>Budget carriers offer dramatic savings on comparable domestic routes.</li>
+<li>Booking earlier gives a modest edge, but don't expect large savings from timing alone.</li>
+<li>Don't over-optimize for stops — it's mainly about convenience, not major cost savings.</li>
+</ul>
+</div>
+
+</body>
+</html>
