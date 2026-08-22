@@ -1,4 +1,5 @@
 # ✈️ AI Travel Analyst
+🔗 **[View live dashboard](https://akshayas2009.github.io/ai-travel-analyst/dashboard.html)**
 
 ## Project Overview
 A data-driven analysis of flight pricing data, built to uncover the key factors that drive airfare costs and help travelers make smarter booking decisions. Includes an interactive Streamlit dashboard for exploring the data.
